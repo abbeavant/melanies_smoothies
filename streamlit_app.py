@@ -11,7 +11,7 @@ st.write(
 
 # import streamlit as st
 
-cnx = st.connetion("snowflake")
+cnx = st.connection("snowflake")
 session = cnx.session()
 
 
@@ -20,7 +20,7 @@ st.write('The name on your smoothie will be', name_on_order)
 
 
 #Bring it all together Lesson 1: 🥋 Display the Fruit Options List in Your Streamlit in Snowflake (SiS) App. 
-session = get_active_session()
+#session = get_active_session()
 my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT_NAME'))
 
 ingredients_list = st.multiselect(
